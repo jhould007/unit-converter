@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Unit Converter</title>
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!--End of Bootstrap CSS-->
+
+        <!--Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!--End of Bootstrap JS-->
+
+        <!--Style Sheet-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 align="center">Unit Converter</h1>
+            <nav class="navbar navbar-light bg-light">
+                <a class="nav-item nav-link" href="distance.html">Distance</a>
+                <a href="time.html" class="nav-item nav-link">Time</a>
+                <a href="volume.html" class="nav-item nav-link">Volume</a>
+                <a href="temperature.html" class="nav-item nav-link">Temperature</a>
+            </nav>
+            <input style="margin:20px" type="email" class="form-control" id="input" aria-describedby="unitInput" placeholder="Enter distance (m)">
+            <div class="card mb-1">
+                <h6 id="kilometers" align="center">Kilometers = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="inches" align="center">Inches = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="feet" align="center">Feet = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="miles" align="center">Miles = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="lightyears" align="center">Light Years = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="parsecs" align="center">Parsecs = </h6>
+            </div>
+            <div class="card mb-1">
+                    <h6 id="earth-widths" align="center">Earth Widths = </h6>
+                </div>
+        </div>
+
+        <script>
+        document.getElementById("input").addEventListener("input", function() {
+            var value = parseFloat(document.getElementById("input").value); 
+            document.getElementById("kilometers").innerHTML = "Kilometers = " + value / 1000;
+            document.getElementById("inches").innerHTML = "Inches = " + value * 39.37; 
+            document.getElementById("feet").innerHTML = "Feet = " + value * 3.281; 
+            document.getElementById("miles").innerHTML = "Miles = " + value * (6.214 * Math.pow(10, -4)); 
+            document.getElementById("lightyears").innerHTML = "Light Years = " + value * (1.057 * Math.pow(10, -16)); 
+            document.getElementById("parsecs").innerHTML = "Parsecs = " + value * (3.241 * Math.pow(10, -17));
+            document.getElementById("earth-widths").innerHTML = "Earth Widths = " + value / (1.274202 * Math.pow(10, 7));  
+        })
+        </script>
+    </body>
+</html>

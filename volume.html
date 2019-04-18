@@ -58,6 +58,12 @@
             var value = parseFloat(document.getElementById("input").value); 
             document.getElementById("mL").innerHTML = "mL = " + value * Math.pow(10, 3); 
             document.getElementById("cm3").innerHTML = "cm3 = " + value * Math.pow(10, 3);
+            document.getElementById("m3").innerHTML = "m3 = " + value * Math.pow(10, -3); 
+            document.getElementById("in3").innerHTML = "in3 = " + value * 61.02; 
+            document.getElementById("ft3").innerHTML = "ft3 = " + value * 0.03531;
+            document.getElementById("gallons").innerHTML = "gallons = " + value * 0.2642; 
+            document.getElementById("pints").innerHTML = "pints = " + value * 2.113; 
+            document.getElementById("quarts").innerHTML = "quarts = " + value * 1.057; 
         })
         </script>
     </body>

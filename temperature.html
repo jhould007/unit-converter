@@ -24,6 +24,7 @@
     <body>
         <div class="container">
             <h1 align="center">Unit Converter</h1>
+
             <!--Navbar-->
             <nav class="navbar navbar-light bg-light">
                     <a class="nav-item nav-link" href="distance.html"><i class="fas fa-ruler-vertical"></i> Distance</a>
@@ -32,6 +33,7 @@
                     <a href="temperature.html" class="nav-item nav-link"><i class="fas fa-thermometer-three-quarters"></i> Temperature</a>
                 </nav>
                 <!--End of Navbar-->
+
             <input style="margin:20px" type="email" class="form-control" id="input" aria-describedby="unitInput" placeholder="Enter temperature (°C)">
             <div class="card mb-1">
                 <h6 id="kelvin" align="center">Kelvin = </h6>
@@ -45,7 +47,7 @@
         document.getElementById("input").addEventListener("input", function() {
             var value = parseFloat(document.getElementById("input").value); 
             document.getElementById("kelvin").innerHTML = "Kelvin = " + (value + 273);
-            document.getElementById("fahrenheit").innerHTML = "Fahrenheit = " + (5.0 / 9.0) * value + 32; 
+            document.getElementById("fahrenheit").innerHTML = "Fahrenheit = " + (5.0 / 9.0) * (value + 32); 
         })
         </script>
 

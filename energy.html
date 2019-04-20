@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Unit Converter</title>
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!--End of Bootstrap CSS-->
+
+        <!--FontAwesome CSS-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!--End of FontAwesome CSS-->
+
+        <!--Bootstrap JS-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!--End of Bootstrap JS-->
+
+        <!--Style Sheet-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 align="center">Unit Converter</h1>
+
+            <!--Navbar-->
+            <nav class="navbar navbar-light bg-light">
+                    <a class="nav-item nav-link" href="distance.html"><i class="fas fa-ruler-vertical"></i> Distance</a>
+                    <a href="time.html" class="nav-item nav-link"><i class="fas fa-clock"></i> Time</a>
+                    <a href="volume.html" class="nav-item nav-link"><i class="fas fa-flask"></i> Volume</a>
+                    <a href="temperature.html" class="nav-item nav-link"><i class="fas fa-thermometer-three-quarters"></i> Temperature</a>
+                    <a href="energy.html" class="nav-item nav-link"><i class="fas fa-bolt"></i> Energy</a>
+                    <a href="speed.html" class="nav-item nav-link"><i class="fas fa-tachometer-alt"></i> Speed</a>
+                </nav>
+                <!--End of Navbar-->
+
+            <input style="margin:20px" type="email" class="form-control" id="input" aria-describedby="unitInput" placeholder="Enter energy (J)">
+            <div class="card mb-1">
+                <h6 id="kilojoules" align="center">Kilojoules = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="electronvolts" align="center">Electron Volts = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="calories" align="center">Calories = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="kilocalories" align="center">Kilocalories = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="britishthermalunits" align="center">British Thermal Units = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="watthours" align="center">Watt Hours = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="kilowatthours" align="center">Kilowatt Hours = </h6>
+            </div>
+            <div class="card mb-1">
+                <h6 id="megawatthours" align="center">Megawatt Hours = </h6>
+            </div>
+        </div>
+
+        <script>
+        document.getElementById("input").addEventListener("input", function() {
+            var value = parseFloat(document.getElementById("input").value); 
+            document.getElementById("kilojoules").innerHTML = "Kilojoules = " + value * 1000;
+            document.getElementById("electronvolts").innerHTML = "Electron Volts = " + value * (6.2415091 * Math.pow(10, 18)); 
+            document.getElementById("calories").innerHTML = "Calories = " + value * (2.39 * Math.pow(10, -1)); 
+            document.getElementById("kilocalories").innerHTML = "Kilocalories = " + value * (2.39 * Math.pow(10, -4)); 
+            document.getElementById("britishthermalunits").innerHTML = "British Thermal Units = " + value * (9.478 * Math.pow(10, -4)); 
+            document.getElementById("watthours").innerHTML = "Watt Hours = " + value * (2.778 * Math.pow(10, -4)); 
+            document.getElementById("kilowatthours").innerHTML = "Kilowatt Hours = " + value * (2.778 * Math.pow(10, -7)); 
+            document.getElementById("megawatthours").innerHTML = "Megawatt Hours = " + value * (2.778 * Math.pow(10, -11)); 
+        })
+        </script>
+
+<!--Footer-->
+<div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+    <div class="footer">
+      <h5 class="card-title" align="center">Project Made By Josh Houlding</h5>
+      <div class="row justify-content-center">
+      <!--Linkedin-->
+      <div class="linkedin">
+      <a href="www.linkedin.com/in/joshhoulding"><i class="fab fa-linkedin"></i></a>
+      <h6>Linkedin</h6>
+      </div>
+      <!--End of Linkedin-->
+      <!--Github-->
+      <div class="github">
+      <a href="https://github.com/jhould007"><i class="fab fa-github"></i></a>
+      <h6>Github</h6>
+      </div>
+      <!--End of Github-->
+      </div>
+      </div>
+    </div>
+  </div>
+  <!--End of footer-->
+    </body>
+</html>

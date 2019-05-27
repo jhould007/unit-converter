@@ -38,18 +38,18 @@
 
             <input style="margin:20px" type="email" class="form-control" id="input" aria-describedby="unitInput" placeholder="Enter speed (m/s)">
             <div class="card mb-1">
-                <h6 id="km/h" align="center">Km/h = </h6>
+                <h6 id="kmph" align="center">Kmph = </h6>
             </div>
             <div class="card mb-1">
-                <h6 id="mi/h" align="center">Mi/h = </h6>
+                <h6 id="mph" align="center">Mph = </h6>
             </div>
         </div>
 
         <script>
         document.getElementById("input").addEventListener("input", function() {
             var value = parseFloat(document.getElementById("input").value); 
-            document.getElementById("km/h").innerHTML = "Km/h = " + (value * 3.6);
-            document.getElementById("mi/h").innerHTML = "Mi/h = " (value * 2.237); 
+            document.getElementById("kmph").innerHTML = "Kmph = " + (value * 3.6);
+            document.getElementById("mph").innerHTML = "Mph = " + (value * 2.237); 
         })
         </script>
 

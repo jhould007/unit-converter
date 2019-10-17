@@ -2,10 +2,6 @@
     margin: 10px; 
 }
 
-.row {
-    text-align: center; 
-}
-
 div.footer a {
     color: white; 
     font-size: 30px;
@@ -20,4 +16,8 @@ div.row a, h6 {
 
 .footer {
     position: fixed; 
+}
+
+.linkedin, .github, .website {
+    align-content: center; 
 }
